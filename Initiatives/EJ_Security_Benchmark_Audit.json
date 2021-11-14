@@ -1,0 +1,185 @@
+{
+    "name": "SecBenchmarkAudit",
+    "properties": {
+        "displayName": "EJ Security Benchmark Audit",
+        "description": "This initiative contains Data privacy and Protection policies involving Logging, Data transfers, Versioning and recoverability security controls for Azure Resources",
+        "metadata": [{
+            "category": "Security Benchmark",
+            "version": "1.0"
+        }],
+        "policyDefinitionGroups": [{
+                "name": "Protect and Secure Data Privacy and Protection"
+            },
+            {
+                "name": "Protect and Secure Digital Identity"
+            },
+            {
+                "name": "Protect and Secure Network and Endpoint Security"
+            },
+            {
+                "name": "Manage and Govern Application Security"
+            },
+            {
+                "name": "Visibility and Monitoring Cyber Defense"
+            }
+        ],
+        "parameters": {},
+        "policyDefinitions": [{
+                "policyDefinitionReferenceId": "AuthenticationshouldbeenabledonyourFunctionapp",
+                "policyDefinitionName": "c75248c1-ea1d-4a9c-8fc9-29a6aabd5da8",
+                "parameters": {},
+                "groupnames": [
+                    "Protect and Secure Digital Identity"
+                ]
+            },
+            {
+                "policyDefinitionReferenceId": "AuthenticationshouldbeenabledonyourAPIapp",
+                "policyDefinitionName": "c4ebc54a-46e1-481a-bee2-d4411e95d828",
+                "parameters": {},
+                "groupnames": [
+                    "Protect and Secure Digital Identity"
+                ]
+            },
+            {
+                "policyDefinitionReferenceId": "AuthenticationshouldbeenabledonyourWebapp",
+                "policyDefinitionName": "95bccee9-a7f8-4bec-9ee9-62c3473701fc",
+                "parameters": {},
+                "groupnames": [
+                    "Protect and Secure Digital Identity"
+                ]
+            },
+            {
+                "policyDefinitionReferenceId": "RemotedebuggingshouldbeturnedoffforFunctionApps",
+                "policyDefinitionName": "0e60b895-3786-45da-8377-9c6b4b6ac5f9",
+                "parameters": {},
+                "groupnames": [
+                    "Manage and Govern Application Security"
+                ]
+            },
+            {
+                "policyDefinitionReferenceId": "RemotedebuggingshouldbeturnedoffforWebApplications",
+                "policyDefinitionName": "cb510bfd-1cba-4d9f-a230-cb0976f4bb71",
+                "parameters": {},
+                "groupnames": [
+                    "Manage and Govern Application Security"
+                ]
+            },
+            {
+                "policyDefinitionReferenceId": "AllauthorizationrulesexceptRootManageSharedAccessKeyshouldberemovedfromEventHubnamespace",
+                "policyDefinitionName": "b278e460-7cfc-4451-8294-cccc40a940d7",
+                "parameters": {},
+                "groupnames": [
+                    "Manage and Govern Application Security"
+                ]
+            },
+            {
+                "policyDefinitionReferenceId": "AllauthorizationrulesexceptRootManageSharedAccessKeyshouldberemovedfromServiceBusnamespace",
+                "policyDefinitionName": "a1817ec0-a368-432a-8057-8371e17ac6ee",
+                "parameters": {},
+                "groupnames": [
+                    "Manage and Govern Application Security"
+                ]
+            },
+            {
+                "policyDefinitionReferenceId": "APIAppshouldonlybeaccessibleoverHTTPS",
+                "policyDefinitionName": "b7ddfbdc-1260-477d-91fd-98bd9be789a6",
+                "parameters": {},
+                "groupnames": [
+                    "Manage and Govern Application Security"
+                ]
+            },
+            {
+                "policyDefinitionReferenceId": "EnsureAPIapphas'ClientCertificates(Incomingclientcertificates)'setto'On'",
+                "policyDefinitionName": "0c192fe8-9cbb-4516-85b3-0ade8bd03886",
+                "parameters": {},
+                "groupnames": [
+                    "Manage and Govern Application Security"
+                ]
+            },
+            {
+                "policyDefinitionReferenceId": "Ensure WEB app has 'Client Certificates (Incoming client certificates)' set to 'On'",
+                "policyDefinitionName": "5bb220d9-2698-4ee4-8404-b9c30c9df609",
+                "parameters": {},
+                "groupnames": [
+                    "Manage and Govern Application Security"
+                ]
+            },
+            {
+                "policyDefinitionReferenceId": "TransparentDataEncryptiononSQLdatabasesshouldbeenabled",
+                "policyDefinitionName": "17k78e20-9358-41c9-923c-fb736d382a12",
+                "parameters": {},
+                "groupnames": [
+                    "Protect and Secure Data Privacy and Protection"
+                ]
+            },
+            {
+                "policyDefinitionReferenceId": "VulnerabilityassessmentshouldbeenabledonSQLManagedInstance",
+                "policyDefinitionName": "1b7aa243-30e4-4c9e-bca8-d0d3022b634a",
+                "parameters": {},
+                "groupnames": [
+                    "Protect and Secure Data Privacy and Protection"
+                ]
+            },
+            {
+                "policyDefinitionReferenceId": "RequireEncryptiononStorageAccounts",
+                "policyDefinitionName": "e594e3ce-925e-4a68-837e-7badda9e54fa",
+                "parameters": {},
+                "groupnames": [
+                    "Protect and Secure Data Privacy and Protection"
+                ]
+            },
+            {
+                "policyDefinitionReferenceId": "AuditingonSQLservershouldbeenabled",
+                "policyDefinitionName": "a6fb4358-5bf4-4ad7-ba82-2cd2f41ce5e9",
+                "parameters": {
+                    "setting": {
+                        "value": "enabled"
+                    }
+                },
+                "groupnames": [
+                    "Protect and Secure Data Privacy and Protection"
+                ]
+            },
+            {
+                "policyDefinitionReferenceId": "Network interfaces should not have public Ip Address v1.0",
+                "policyDefinitionName": "Network interfaces should not have public Ip Address v1.0",
+                "parameters": {},
+                "groupnames": [
+                    "Protect and Secure Network and Endpoint Security"
+                ]
+            },
+            {
+                "policyDefinitionReferenceId": "KeyVaultshoulduseavirtualnetworkserviceendpoint",
+                "policyDefinitionName": "ea4d6841-2173-4317-9747-ff522a45120f",
+                "parameters": {},
+                "groupnames": [
+                    "Protect and Secure Network and Endpoint Security"
+                ]
+            },
+            {
+                "policyDefinitionReferenceId": "RDPaccessfromtheInternetshouldbeblocked",
+                "policyDefinitionName": "e372f825-a257-4fb8-9175-797a8a8627d6",
+                "parameters": {},
+                "groupnames": [
+                    "Protect and Secure Network and Endpoint Security"
+                ]
+            },
+            {
+                "policyDefinitionReferenceId": "SSHaccessfromtheInternetshouldbeblocked",
+                "policyDefinitionName": "2c89a2e5-7285-40fe-afe0-ae8654b92fab",
+                "parameters": {},
+                "groupnames": [
+                    "Protect and Secure Network and Endpoint Security"
+                ]
+            },
+            {
+                "policyDefinitionReferenceId": "VirtualmachinesshouldbemigratedtonewAzureResourceManagerresources",
+                "policyDefinitionName": "1d84d5fb-01f6-4d12-ba4f-4a26081d403d",
+                "parameters": {},
+                "groupnames": [
+                    "Visibility and Monitoring Cyber Defense"
+                ]
+            }
+        ]
+    }
+}

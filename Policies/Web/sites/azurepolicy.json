@@ -1,0 +1,112 @@
+{
+  "Name": "Web Sites accessible over HTTPS",
+  "properties": {
+    "displayName": "Web Sites accessible over HTTPS",
+    "description": "Policy to monitor whether Web Sites require Mutual Authentication between the site and the Clients through Certificates",
+    "mode": "All",
+    "metadata": {
+      "category": "Web",
+      "version": "1.0"
+    },
+    "policyRule": {
+      "if": {
+        "allOf": [
+          {
+            "field": "type",
+            "equals": "Microsoft.Web/sites"
+          },
+          {
+            "anyOf": [
+              {
+                "allOf": [
+                  {
+                    "field": "kind",
+                    "in": "[parameters('kind')]"
+                  },
+                  {
+                    "field": "Microsoft.Web/sites/httpsOnly",
+                    "notIn": "[parameters('httpsOnly')]"
+                  }
+                ]
+              },
+              {
+                "field": "Microsoft.Web/sites/clientCertEnabled",
+                "notIn": "[parameters('clientCertEnabled')]"
+              }
+            ]
+          }
+        ]
+      },
+      "then": {
+        "effect": "[parameters('effect')]"
+      }
+    },
+    "parameters": {
+      "effect": {
+        "type": "string",
+        "defaultValue": "Audit",
+        "allowedValues": [
+          "Audit",
+          "Deny"
+        ],
+        "metadata": {
+          "displayName": "Effect",
+          "description": "Define the effect of the Policy as Audit or Deny"
+        }
+      },
+      "kind": {
+        "type": "array",
+        "metadata": {
+          "displayName": "Kind of Web Sites",
+          "description": "Choose the type of Web Sites this Policy applies to",
+          "controlID": "N/A",
+          "risk": "Data Leakage"
+        },
+        "allowedValues": [
+          "api",
+          "app",
+          "functionapp"
+        ],
+        "defaultValue": [
+          "api",
+          "app",
+          "functionapp"
+        ]
+      },
+      "httpsOnly": {
+        "type": "array",
+        "metadata": {
+          "displayName": "Web site HTTPS only",
+          "description": "Websites that only allow HTTPS (true) or not (false)",
+          "controlID": "N/A",
+          "risk": "Data Leakage"
+        },
+        "allowedValues": [
+          "true",
+          "false"
+        ],
+        "defaultValue": [
+          "true",
+          "false"
+        ]
+      },
+      "clientCertEnabled": {
+        "type": "array",
+        "metadata": {
+          "displayName": "Client Certificates Enabled",
+          "description": "Configuration setting to Determine whether requiring Clients to provide certificates (True) or not (False)",
+          "controlID": "N/A",
+          "risk": "Intrusion"
+        },
+        "allowedValues": [
+          true,
+          false
+        ],
+        "defaultValue": [
+          true,
+          false
+        ]
+      }
+    }
+  }
+}
